@@ -18,19 +18,19 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   @override
+  
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("instagram_ui/assets/images/instagram.png"),
+            Image.asset("instagram_ui/assets/images/logo.png"),
             // UiHelper.CustomImage(imgurl: "logo.png"),
             const SizedBox(
-              
               height: 10,
             ),
-            Image.asset("instagram_ui/assets/images/logo.png"),
+            Image.asset("instagram_ui/assets/images/instagram.png"),
           ],
         ),
       ),
