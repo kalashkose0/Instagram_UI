@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -35,5 +36,27 @@ class UiHelper {
 
   static CustomImage({required String imgurl}) {
     return Image.asset("assets/images/$imgurl");
+  }
+
+  static CustomButton(
+      {required VoidCallback callback, required String buttonname}) {
+    return SizedBox(
+      height: 45,
+      width: 343,
+      child: ElevatedButton(
+          onPressed: () {
+            callback();
+          },
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Color(0XFF3797EF),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5))),
+          child: Center(
+            child: Text(
+              buttonname,
+              style: TextStyle(fontSize: 14, color: Colors.white),
+            ),
+          )),
+    );
   }
 }
